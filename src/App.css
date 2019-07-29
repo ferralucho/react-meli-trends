@@ -1,0 +1,612 @@
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 40vmin;
+    pointer-events: none;
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.goog-dimension-picker {
+    font-size: 18px;
+    padding: 4px
+}
+
+.goog-dimension-picker div {
+    position: relative
+}
+
+.goog-dimension-picker div.goog-dimension-picker-highlighted {
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0
+}
+
+.goog-dimension-picker-unhighlighted {
+}
+
+.goog-dimension-picker-status {
+    font-size: 10pt;
+    text-align: center
+}
+
+.goog-dimension-picker div.goog-dimension-picker-mousecatcher {
+    left: 0;
+    position: absolute !important;
+    top: 0
+}
+
+html, body, .grid {
+    font-family: 'Roboto', Arial, sans-serif;
+    height: 100%
+}
+
+.notification {
+    color: #a94442;
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    border-radius: 4px;
+    font-size: 14px;
+    left: 20%;
+    padding: 15px;
+    position: absolute;
+    top: 10px;
+    width: 60%
+}
+
+.rtl-app {
+    direction: rtl
+}
+
+.rtl-app .grid {
+    direction: initial
+}
+
+.sleep .picker, .sleep .pickericon, .sleep .regionselection, .sleep .screensaver-container {
+    opacity: 0;
+    -webkit-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out
+}
+
+.picker {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: none
+}
+
+.ltr-app .picker {
+    left: 0
+}
+
+.rtl-app .picker {
+    right: 0
+}
+
+.pickericon {
+    cursor: pointer;
+    display: block;
+    height: 23px;
+    padding: 10px;
+    position: absolute;
+    width: 22px;
+    z-index: 1
+}
+
+.ltr-app .pickericon {
+    left: 1px
+}
+
+.rtl-app .pickericon {
+    right: 1px
+}
+
+.picking .picker {
+    display: block
+}
+
+.picking .pickericon {
+    display: none
+}
+
+.regionselection {
+    bottom: 20px;
+    color: #fff;
+    font-size: 13px;
+    position: absolute;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    z-index: 3
+}
+
+.ltr-app .regionselection {
+    left: 22px
+}
+
+.rtl-app .regionselection {
+    direction: initial;
+    right: 22px
+}
+
+#region select {
+    cursor: pointer;
+    left: 0px;
+    opacity: 0;
+    position: absolute
+}
+
+.rtl-app #region select {
+    direction: rtl
+}
+
+#region span {
+    border-bottom: 1px dotted #fff;
+    cursor: pointer;
+    display: inline
+}
+
+#region {
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    position: relative
+}
+
+.goog-dimension-picker-status {
+    display: none
+}
+
+.test-tile {
+    border: 1px solid black;
+    color: white;
+    font-size: 30px;
+    font-weight: 100;
+    height: 400px;
+    width: 500px
+}
+
+.tile {
+    overflow: hidden;
+    position: relative;
+    height: 200px;
+    width: 200px;
+}
+
+.card {
+    font-size: 1.4em;
+    height: 100%;
+    position: absolute;
+    -webkit-transition-property: top, left;
+    transition-property: top, left;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: cubic-bezier(0.06, 0.74, 0.24, 1);
+    -webkit-transition-duration: 600ms;
+    transition-duration: 600ms;
+    vertical-align: baseline;
+    width: 100%
+}
+
+.current {
+    left: 0;
+    top: 0
+}
+
+.top {
+    left: 0;
+    top: -100%
+}
+
+.right {
+    left: 100%;
+    top: 0
+}
+
+.bottom {
+    left: 0;
+    top: 100%
+}
+
+.left {
+    left: -100%;
+    top: 0
+}
+
+.typing-container-wrapper {
+    display: table;
+    height: 100%;
+    width: 100%
+}
+
+.typing-container {
+    display: table-cell;
+    font-family: 'Product Sans', Arial, Helvetica, sans-serif;
+    vertical-align: middle;
+    opacity: 0;
+    -webkit-transition: transform 1.15s ease-in-out, opacity .8s linear;
+    transition: transform 1.15s cubic-bezier(0.06, 0.74, 0.24, 1), opacity .8s linear
+}
+
+.rtl-container.typing-container {
+    direction: rtl;
+    letter-spacing: normal
+}
+
+.typing-container.start {
+    opacity: 1;
+    padding-left: 0.5em;
+    padding-right: 0.5em
+}
+
+.typing {
+    color: white;
+    text-decoration: none
+}
+
+.typing, .blinking-cursor {
+    text-shadow: 0 0.025em 0 rgba(0, 0, 0, 0.1);
+    word-wrap: break-word
+}
+
+.blinking-cursor {
+    color: white;
+    height: 1em;
+    margin-bottom: -0.12em;
+    width: 0.02em;
+    min-width: 1px;
+    background-color: #fff;
+    vertical-align: baseline;
+    display: inline-block;
+    opacity: 1;
+}
+
+.done-typing .blinking-cursor {
+    -webkit-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite
+}
+
+.logo {
+    bottom: 14px;
+    position: absolute;
+    z-index: 2
+}
+
+.ltr-app .logo {
+    right: 22px
+}
+
+.rtl-app .logo {
+    left: 22px
+}
+
+@media screen and (max-width: 1024px) {
+    .logo {
+        bottom: auto;
+        top: 14px
+    }
+
+    .ltr-app .logo {
+        right: 10px
+    }
+
+    .rtl-app .logo {
+        left: 10px
+    }
+}
+
+.logo a {
+    display: block;
+    padding-left: 75px;
+    text-decoration: none
+}
+
+.logo span {
+    font-size: 17px;
+    color: #fff;
+    display: inline-block;
+    line-height: 29px;
+    margin-left: 4px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    vertical-align: bottom
+}
+
+.goog-dimension-picker {
+    cursor: pointer;
+    outline: none;
+    font-size: 24px
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: 0
+    }
+    50.01% {
+        opacity: 1
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: 0
+    }
+    50.01% {
+        opacity: 1
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+.screensaver {
+    position: absolute;
+    z-index: 3;
+    text-align: center;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    text-decoration: none
+}
+
+.rtl-app .screensaver {
+    right: auto;
+    left: 20px
+}
+
+.screensaver .image {
+    margin: 0 auto;
+    margin-bottom: 5px;
+    width: 115px;
+    height: 74px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    display: table;
+    font-size: 11px;
+    line-height: 14px;
+    overflow: hidden;
+    letter-spacing: -0.05em
+}
+
+
+
+.screensaver .image .wrapper {
+    display: table-cell;
+    vertical-align: middle
+}
+
+.screensaver .image .wrapper2 {
+    text-align: center;
+    width: 95px;
+    margin: 0 auto
+}
+
+.screensaver .caption {
+    border-radius: 160px;
+    max-width: 160px;
+    display: inline-block;
+    padding: 0 9px 1px 9px;
+    background: #4ea8e5;
+    border: 1px solid #2882bf;
+    margin-bottom: 3px
+}
+
+.screensaver .caption span {
+    font-size: 11px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    color: #fff
+}
+
+@media only screen and (max-width: 500px) {
+    .screensaver {
+        display: none
+    }
+}
+
+.small-window .screensaver {
+    display: none
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block
+}
+
+audio, canvas, video {
+    display: inline-block
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0
+}
+
+[hidden] {
+    display: none
+}
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0
+}
+
+a:focus {
+    outline: thin dotted
+}
+
+a:active, a:hover {
+    outline: 0
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0
+}
+
+abbr[title] {
+    border-bottom: 1px dotted
+}
+
+b, strong {
+    font-weight: bold
+}
+
+dfn {
+    font-style: italic
+}
+
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0
+}
+
+mark {
+    background: #ff0;
+    color: #000
+}
+
+code, kbd, pre, samp {
+    font-family: monospace, serif;
+    font-size: 1em
+}
+
+pre {
+    white-space: pre-wrap
+}
+
+q {
+    quotes: "\00201c" "\00201d" "\002018" "\002019"
+}
+
+small {
+    font-size: 80%
+}
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sup {
+    top: -0.5em
+}
+
+sub {
+    bottom: -0.25em
+}
+
+img {
+    border: 0
+}
+
+svg:not(:root) {
+    overflow: hidden
+}
+
+figure {
+    margin: 0
+}
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em
+}
+
+legend {
+    border: 0;
+    padding: 0
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0
+}
+
+button, input {
+    line-height: normal
+}
+
+button, select {
+    text-transform: none
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer
+}
+
+button[disabled], html input[disabled] {
+    cursor: default
+}
+
+input[type="checkbox"], input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box
+}
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
